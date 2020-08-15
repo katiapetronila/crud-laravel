@@ -1,10 +1,15 @@
 <h1>Formulário de Pessoa</h1>
 
+@if(isset($pessoa))
+<form action="/pessoas/{{$pessoa->id}}" method="post">
+@method("PUT")
+@else
 <form action="/pessoas" method="post">
+@endif
     @csrf
-    <input type="text" name="nome" required>
-    <input type="text" name="telefone" required>
-    <input type="text" name="email" required>
+    <input type="text" name="nome" value="{{ $pessoa->nome}}" required>
+    <input type="text" name="telefone" value="{{ $pessoa->telefone}}" required>
+    <input type="text" name="email" value="{{ $pessoa->email}}" required>
     <button type="submit">Salvar</button>
 </form>
 

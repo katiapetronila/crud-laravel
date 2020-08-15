@@ -21,7 +21,7 @@ class PessoaController extends Controller
 
     public function store(Request $request)
     {
-        // $pessoa = new \App\Pessoa();
+       // $pessoa = new \App\Pessoa();
 
         // $pessoa->nome = $request->nome;
         // $pessoa->telefone = $request->telefone;
@@ -32,5 +32,19 @@ class PessoaController extends Controller
         Pessoa::create($request->all());
 
         return redirect('/pessoas');
+    }
+    
+    public function edit(Pessoa $pessoa)
+    {
+        return view('pessoa.create', compact('pessoa'));
+
+    }
+
+    public function update(Request $request,Pessoa $pessoa)
+    {
+        $pessoa->update($request->all());
+
+        return redirect('/pessoas');
+
     }
 }
