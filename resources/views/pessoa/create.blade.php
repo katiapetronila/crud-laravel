@@ -1,3 +1,7 @@
+@extends('template.master')
+@section('titulo', 'Formulário')
+@section('conteudo')
+
 <h1>Formulário de Pessoa</h1>
 
 @if(isset($pessoa))
@@ -16,3 +20,4 @@
 <br>
 
 <a href="/pessoas">Voltar</a>
+@endsection
