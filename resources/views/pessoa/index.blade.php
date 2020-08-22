@@ -1,8 +1,8 @@
-@extends('template.master')
+@extends('layouts.app')
 
-@section('titulo', 'katia')
+{{-- @section('titulo', 'katia') --}}
 
-@section('conteudo')
+@section('content')
 <h1>Pessoas Cadastradas</h1>
 
 <a class="btn btn-primary" href="/pessoas/create">Cadastrar Nova</a>
