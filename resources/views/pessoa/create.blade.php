@@ -7,7 +7,7 @@
 <form action="/pessoas" method="post">
 @endif
     @csrf
-    <input type="text" name="nome" value="{{ $pessoa->nome}}" required>
+    <input type="text" name="nome" value="{{ $pessoa->nome ??''}}" required>
     <input type="text" name="telefone" value="{{ $pessoa->telefone ??''}}" required>
     <input type="text" name="email" value="{{ $pessoa->email ??''}}" required>
     <button type="submit">Salvar</button>
